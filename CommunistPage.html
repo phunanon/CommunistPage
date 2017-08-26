@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Communist Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <meta charset="UTF-8">
+        <script>
+var agreeIgnore;
+function agree (e)
+{
+    p = this.parentNode;
+    window.scrollTo(0, p.offsetTop);
+    agreeIgnore = Date.now() + 100;
+    p.addEventListener("click", function () {
+        if (Date.now() > agreeIgnore) {
+            this.removeEventListener("click", arguments.callee, false);
+            s = this.style;
+            s.cursor = "default";
+            s.maxWidth = "100%";
+            setTimeout(function() {
+                s.backgroundColor = "rgba(255, 255, 164, .75)";
+                s.maxHeight = "500rem";
+            }, 1000);
+        }
+    });
+    s = p.style;
+    s.maxHeight = "4rem";
+    //s.paddingTop = "0";
+    s.cursor = "pointer";
+    s.backgroundColor = "rgba(0, 255, 0, .75)";
+    setTimeout(function() {
+        s.maxWidth = "50%";
+    }, 1000);
+}
+
+
+function pageLoad ()
+{
+  //Add event to clicking "I agree"
+    var agrees = document.body.getElementsByTagName("agree");
+    for (var i = 0, len = agrees.length; i < len; ++i) {
+        agrees[i].addEventListener("click", agree);
+    }
+  //Add double spaces after sentences
+    var paragraphs = document.body.getElementsByTagName("p");
+    for (var i = 0, len = paragraphs.length; i < len; ++i) {
+        paragraphs[i].innerHTML = paragraphs[i].innerHTML.split(". ").join(".\xA0 ");
+    }
+}
+        </script>
+
+
+
+
+
+        <style>
+@font-face {
+    font-family: 'Museo Slab';
+    src: url('museo-slab.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Tangerine';
+    src: url('Tangerine.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: all 1s ease;
+}
+html, body {
+    min-height: 100%;
+}
+body {
+    background: linear-gradient(#000, #400, #800, #f00, #f00, #fff);
+    padding: 1rem 1rem 10rem 1rem;
+    font-family: "Museo Slab", serif;
+    font-size: 1.1rem;
+    letter-spacing: .01rem;
+}
+
+section {
+    background-color: rgba(255, 255, 164, .75);
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    text-shadow: .1rem .1rem .1rem rgba(255, 255, 255, .1);
+    line-height: 3rem;
+    border-radius: .5rem;
+    border: .1rem solid #000;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 500rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.5rem;
+    width: 80%;
+    margin: 0rem auto 2rem auto;
+    border-bottom: .2rem solid #000;
+    padding: .5rem;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+}
+p {
+    text-align: justify;
+    line-height: 1.8rem;
+    /*text-indent: -1rem;
+    padding-left: 1rem;*/
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    color: #fff;
+    text-shadow: .08rem .08rem #000;
+       font-family: "Tangerine";
+    font-size: 2rem;
+    background-color: #000;
+    border: .1rem solid #fff;
+    margin: 1rem;
+}
+blockquote span, blockquote author {
+    display: inline-block;
+    max-width: 32rem;
+    white-space: pre-wrap;
+    padding: 1rem;
+    letter-spacing: -.05rem;
+    min-width: 10rem;
+}
+blockquote author {
+    display: block;
+    color: #444;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Museo Slab", serif;
+}
+
+section, blockquote {
+    box-shadow: .25rem .25rem .5em #000;
+}
+
+red {
+    color: #f00;
+    text-shadow: .08rem .08rem #000;
+}
+h1 red {
+    text-shadow: .1rem .1rem #000;
+}
+
+agree {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 6rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #080;
+    display: block;
+    font-variant: small-caps;
+    cursor: pointer;
+    user-select: none;
+    border: .1rem solid #040;
+    border-radius: .2rem;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    line-height: 1rem;
+    transition: all .5s ease;
+}
+agree:hover {
+    background-color: #000;
+}
+agree:active {
+    box-shadow: none;
+}
+        </style>
+    </head>
+    <body onload="pageLoad()">
+
+<section>
+    <h1>By the time you have read to the bottom of this page, you will be a <red>Communist</red>.</h1>
+    <p style="text-align: center">You will be able to identify the shortcomings capitalist society confidently, engage with Communist ideology, and help fuel the revolution to come.</p>
+</section>
+
+<section>
+    <h3>Political Democracy</h3>
+    <p>Communism has a very clear end-goal: to end all inequalities, man-made or otherwise, and see all human beings as equally valued individuals. Its absolute estabishment is still far in the future, but to strive for it is to be a <i>communist</i>. This page looks to show why this socio-economic system is beneficial and superior for all but the few in current society. The first staple is, however, your ability to confidently defend <red>democracy</red>. You may already advocate it, but rather blindly &ndash; <i>why</i> do we have democracy? Why are the physically or mentally strongest in our societies not the ones who systematically control our lives?</p>
+    <p>Arguably: it is the best possible system we can achieve, without a benevolent all-knowing force which can guide us to eternal happiness. To advocate anything else could be excluding those who deserve a say in society, including yourself: it was once considered cultural norm to only allow land-owners to vote, and then all men, and then all women. If, suddenly, society decided to stop giving those with a criminal record a vote, it would be the current estabishment's goal to penalise those in opposing political spheres&mdash;you could be a victim of this. It could be to stop giving voting rights to those who do not attend college, or only give to those with a job, or any other discrimination on any grounds, and it will be exploited. If it is not through the universal <explain explanation="Sufferage is the movement to ensure all people have the right to vote.">sufferage</explain> of humanity for political power driven purely through empathy, it is the fact that <b>any</b> corruption or deviation of this equality can be swung towards you, or the ones you care about.</p>
+    <p>And without democracy at all&mdash;without a geopolitical entity with a <explain explanation="The Monopoly on Violence is a term used to describe countries and other organisations. If somebody wants you removed from a certain area, they must use physical force. If they are the strongest in that area, they have the monopoly on violence.">monopoly on violence</explain>&mdash;the natural forces which seperate us as human beings with different qualities and strengths will cause the most violent act one can commit to shift, from putting an X on a ballot paper, to death itself.</p>
+    <agree>I agree</agree>
+</section>
+
+<blockquote><span>First they came for the Socialists, and I did not speak out-
+Because I was not a Socialist.</span>
+<span>Then they came for the Trade Unionists, and I did not speak out-
+Because I was not a Trade Unionist.</span>
+<span>Then they came for the Jews, and I did not speak out-
+Because I was not a Jew.</span>
+<span>Then they came for me-
+And there was no one left to speak for me.</span>
+<author>Martin Niem&ouml;ller (1892-1984)</author>
+</blockquote>
+
+<section>
+    <h3>Arbitrated surplus</h3>
+    <p>Usually, we work for others to earn a wage. However, the relationship between employer and employee is, by nature, <i>exploitative</i>. Imagine you could freely move around the Earth, and choose from ten different countries, all with their own kings and queens. You have some choice in which kingdom or queendom you choose, but it's a narrow selection. They are all going to want to extract work from you, in some way, and you have no say in the matter&mdash;they are already wealthy, and can use it to exert their force on you. Sure, the kings and queens may try to sweeten the deal, or alternatively collude between themselves to ensure low-competition, but to whatever end you will have no say in how your life is ruled. This is just like the job market of capitalist countries.</p>
+    <p>You approach an employer&mdash;you are one of many to do so&mdash;and offer your labour for a wage. You are contractually bound to their terms, and all the fruits of your labour become theirs instantly by law. If you do not perform to an expected standard, or do not agree with the contract's terms (which will be surpassed at every opportunity), an employer can easily threaten you with the fact you are replaceable&mdash;there are plenty others always queuing up for your job (a staple of all capitalists countries is <i>some</i> unemployment to ensure leverage).</p>
+    <p>Now, we are all aware that a salesman will charge more money than spent to make the product in order to profit, but in actuality it is stealing from those who produced the profit. These people will not be able to recieve the full worth of the product they created &mdash; the money unspent towards creating the profit. This is described as a <i>surplus value</i>, and is arbitrated solely by the employer. If your work begins to generate products of much greater worth, you <i>do not</i> recieve the benefits.</p>
+    <p>The working lives of those who cannot self-employ are quite literally dictatorially controlled by a competing & colluding group of wealthy individuals & entities. It is not unnatural for a system where this does not occur, whereby an economy is structured for the benefit of society through democracy. The romantic view of an employer as an innovative entrepreneur benefitting both customer and employee is overshadowed by the sistemic abuse of legal powers, buying-out of competition, environmental pollution, mass-layoffs, overworked staff, and more. If a boss is such a good business-leader, vote to give them the authority of your working life, just as any politician&mdash;lest you forget to declare, there are plenty of other bosses as replacement!</p>
+    <agree>I agree</agree>
+</section>
+
+<blockquote>
+<span>To force a change, sometimes you need to stand up. You know what you're worth - rather than what your employer is paying you.</span>
+<author>Alex Morgan</author>
+</blockquote>
+
+<section>
+    <h3>Corporate plutocracy</h3>
+    <p>Shares and shareholding may or may not be familiar to you, so in case of the latter: an investor purchases shares (say one share per dollar), and (if enough are bought, in some cases) is given one vote per share for <i>the board of directors</i>. This is a legal practise upheld by a state, giving shareholders the right to vote perhaps once a year. In return, the directors elected to sit on the board reward the shareholders with quarterly dividends to their coffers. These dividends are not substantial in themselves, and usually shares are sold while dividends are paying handsomely&mdash;leaving an investor with more than they started.</p>
+    <p>There is a term for this, not openly spoken in a capitalist society in order to hide its true form - <i>plutocracy</i>. Where power is given to those with the most wealth. Humourously or not, the United States is the only current nation to be described as a plutocracy (with democratic <i>safeguards</i>, if you will) due to its fervent lobbying. And of course, in a society where the wealthy have political power, the wealthy only become more so.</p>
+    <agree>I agree</agree>
+</section>
+<blockquote>
+    <span>What would happen if someone were to choose the captains of ships by their wealth, refusing to entrust the ship to a poor person even if he was a better captain?</span>
+    <span>They would make a poor voyage of it.</span>
+<author>Plato, Socrates and Adeimantus in The Republic, 551c</author>
+</blockquote>
+
+
+
+<section>
+    <h3>Money and effort</h3>
+    <p>When one individual reaches a certain point in their wealth, they can sustain themselves <i>near permanently</i> for all their human needs and reasonable desires, just from the money <i>generated</i> by the money they already have. It is a fact a capitalist nation wants you to forget, or dreamily aspire to: a wealthy individual can invest their money into businesses and other ventures (such as landlordship), with an interest or dividends generating a larger return than was put in. Money gravitates money.</p>
+    <p>Ignoring how such an individual managed to 'get their foot in the door' with their wealth in the first place, we must focus on the fact that: for near no extra effort, the wealthiest of society extract wealth from the rest of society. Consider: as of 2017, there are five billionaires which together make up more than the lower 50% of the entire world's wealth. So it is safe to assume they worked a few hundred million times harder than the most destitute of our planet? Of course not! These people have extracted wealth from either employees under their lash, tenants in their quasi-kingdoms, leeching interest from loans and investments, and much more. All this while flagrantly ensuring their wealth is out of reach from taxation, or exempt entirely. Perhaps the solution is to give all members of society a one million dollar loan until they can also live comfortably, and ensure no man is taxed!</p>
+    <p>Landlords are a particularly transparent and defended class within society. Many have been hard-working individuals which have saved their pay, and now compete tirelessly with their neighbouring landlords to improve the living conditions for many people, but it will always remain an exploitative practise: they are using their capital to give themselves a more-than-generous pay off the backs of tenants, for a genre of work not alien to all intelligent human beings.</p>
+    <agree>I agree</agree>
+</section>
+
+<blockquote>
+<span>While boasting of our noble deeds we're careful to conceal the ugly fact that by an iniquitous money system we have nationalized a system of oppression which, though more refined, is not less cruel than the old system of chattel slavery.</span>
+<author>Horace Greeley (1811-1872)</author>
+</blockquote>
+
+<section>
+    <h3>Market competition</h3>
+    <p>A main driver for innovation within a capitalist society can be accredited to competition between firms within industries, practically forcing these living & breathing creatures to adapt or die. However, it is extraordinarily difficult to prevent when you explictly <i>do not</i> want competition, within capitalism. An example of unwelcome competition is healthcare. If the rewarding mechanism for healthcare providers is simply the amount of money they can extract from their patients, it will ironically not be in their best interest to provide the best service. Of course, when a patient is fit and healthy, they can freely choose which hospital to attend which does indeed provide the best care, but nobody attends a hospital while <i>fit and healthy</i>. The more infirm you become, the less movable you are, the less time you have to be worked upon, and the more you will be willing to pay in order to keep life itself.</p>
+    <p>However, competition isn't a completely irredeemable instrument, and can be used <i>rationally</i> in order to improve products and services. It is, indeed, used rationally <i>within</i> each competeting firm in order to improve their independent results. However, if given the choice to split one business with 1000 engineers into two directly competing businesses, it would be entirely unwise. Their base of knowledge would be halved, incredibly important <i>collaboration</i> between the two groups would be vehemently discouraged, and there would be no worker wishing not to be reunited! Unfortunately, to reunite such a business under capitalism would see all engineers' creations held to randsom from the rest of society, skyrocketing prices as a rent upon their artifical scarcity.</p>
+    <agree>I agree</agree>
+</section>
+
+<section>
+    <h3>Land & Monopoly</h3>
+    <p>One must question why an individual or corporation can <i>own</i> land. Sovereignty exists by virtue of those who continue to defend it - your grandparents perhaps literally fought for an arbitrary area of land. As most of us pay taxes, and some of us with our lives, is it not an incredible insult when a corporation is allowed to plunder natural resources for its unshared profit? Why are mines, oceans, lakes, woodlands, fields, and more harvested for their resources by good working men only for a cut to go to the owner of the land? They (we) should all own the land! The farmer may serve thousands from their livestock, but they are by the same factor more useful to others than just them - we deserve democratic control over our natural resources, as they benefit all of us. We shouldn't allow private entities to siphon off money just because they 'bought' the land.</p>
+    <p>Another issue arises from non-democratically owned means of serving ourselves: natural monopolies. These can constitute any service where competition is not an option to a customer. Hospitals, rail, bus routes, airports, schools, and essentially any fixed structure with non-overlapping catchments. For example, there is only one bus service in a rural area. It is prohibitive for other bus companies to set-up in the area to compete, as it would reduce the customer-base for both businesses, making costs begin to outweigh profits. In the mean time, this one bus service can charge a hefty price to punters who have no other choice. If all businesses were subject to democratic planning and ownership, these issues would not arise.</p>
+    <agree>I agree</agree>
+</section>
+
+<section>
+    <h3>Pursuit of private profit</h3>
+    <p>While it is a noble sentiment that capitalism can serve others simply by serving yourself, by making customers (and to a lesser extent, employees) happier with better quality and service, it is unfortunately not so rosey. Collusion, buying out markets, monopolies, mass layoffs, war, underpayment of labour, price hikes, waste, and so much more has their roots deeply planted in a capitalist society due to the main driver &ndash; profit. This is going to be a topic-based break-down.</p>
+    <hr/>
+    <p><b>War and imperialism</b>. War is a niche in any economy &ndash; nearly all countries need the capability to defend themselves from others with armed forces, collectively paid for through taxation. The equipment, supplies, training, catering, whatever it may be, is publicly financed but usually privately provided. Wartime (such as the constant Middle Eastern conflicts) generates a lot of revenue for corporations involved. Ergo, it would be absurd not to assume said corporations would finance programmes, media, projects, and perhaps lawless organisations to fuel the fires of conflict. Something we do try to remain stedfast on, but still a constant in society.</p>
+    <hr/>
+    <p><b>Propagation of consumerism</b>. Capitalism has created a complete fetishism and societal <i>need</i> to buy products. It is not a naturally occurring phenomenom, but one created through the force of advertising, memberships, vouchers, privitisation, throw-away culture, corporate welfare funds, and etc.</p>
+    <hr/>
+    <p><b>Stagnant wages</b>.</p>
+    <hr/>
+    <p><b>Planned obscelence</b>.</p>
+    <hr/>
+    <p><b>Unfavorable layoffs</b> and jobs leaving overseas.</p>
+    <hr/>
+    <p><b>Negative effects on environment</b>.</p>
+    <hr/>
+    <p><b>Unaccountability and lack of transparency</b> between different private firms.</p>
+    <hr/>
+    <p><b>Foriegn aid conning</b> and the plundering of the poorest countries.</p>
+    <hr/>
+    <p><b>Loss of collaboration</b> due to dangerous monopolies. Ask any engineer</p>
+    <hr/>
+    <p><b>Destruction of 'waste'</b>. Food waste https://www.liberationnews.org/food-and-capitalism-a-crisis-html/</p>
+    <hr/>
+    <p><b>The rise of unpaid and unstable work</b>. Gig economy (weekends)
+    <hr/>
+    <p><b>Intellectual property</b>.</p>
+    <hr/>
+    <p><b>Constant erosion of welfare laws</b>. Health and safety, unionisation</p>
+    <hr/>
+    <p><b>Stifling innovation</b> and wasting pure time. digging a hole with two men vs. one and a drill</p>
+    <hr/>
+    <p><b>Abysmal handling of automation</b>.</p>
+    <hr/>
+    <p><b>Price hiking</b>. drugs, specialised equipment</p>
+    <hr/>
+    <p><b>Expensive legal frameworks</b>.</p>
+    <hr/>
+    <p><b>National tariffs</b>.</p>
+    <hr/>
+    <p><b>Unshared resources</b> and research. While unused equipment can be hired out for profit, at a precise record of its use</p>
+</section>
+
+<section>
+    <h3>Means of production</h3>
+    - benefits to reduce policing
+    - loss of accountability, including ethics
+</section>
+
+<section>
+    <h3>Macroeconomic planning</h3>
+    <p></p>
+    
+</section>
+strat planning democracy
+seatbelt laws for health allocation
+
+<section>
+    <h3>Natural democracy</h3>
+    <p>- we're all born different, which creates ineqaulity</p>
+    - beggars can't be choosers, eh?
+    - right to well being
+</section>
+
+<section>
+    <h3>Egalitarian pay</h3>
+    <p>In order for us humans to survive, in a country which has no welfare safety-net, we must sell our labour to others. We all have different skills, situations and locations which make each other favourable to doing the work ourselves.</p>
+-eliminates bonkrupcies
+    <agree>I agree</agree>
+- people of lower abilites feel better doing lower work, which naturally balances out and makes them happier, and saves more able people doing the time - time is precious
+</section>
+
+<section>
+    <h3>Implementation difficulties</h3>
+    <p></p>
+    - Capitalism is efficient as a dictatorship
+    - Imperialism
+    - Leakage
+    - http://www.mintpressnews.com/us-led-economic-war-not-socialism-tearing-venezuela-apart/218335/
+</section>
+
+<section>
+    <h3>Global benefits</h3>
+    <p></p>
+    - Africa may not use resource X, but we do
+    - No migration needed
+</section>
+
+<section>
+    <h3>Communism</h3>
+    <p></p>
+</section>
+<blockquote><span>From each according to their abilities.</span>
+<span>To each according to their needs.</span>
+<author>Karl Marx (1818-1883)</author>
+</blockquote>
+- Things we know but forget: 
+- Grammar schools
+    </body>
+</html>
